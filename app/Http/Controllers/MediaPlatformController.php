@@ -50,7 +50,7 @@ class MediaPlatformController extends Controller
 
         $app = Factory::officialAccount($config);
 
-        $app->server->push(function ($message) use ($code) {
+        $app->server->push(function ($message) use ($code, $mediaPlatformConfig) {
 
             $time = date('Y:m:d H:i:s');
 
@@ -65,6 +65,7 @@ class MediaPlatformController extends Controller
                     'msg_id' => $message['MsgId'] ?? 0,
                     'original_data' => $message,
                     'media_platform_code' => $code,
+                    'media_platform_name' => $mediaPlatformConfig['media_platform_name'],
                 ];
 
                 switch ($message['MsgType']) {
