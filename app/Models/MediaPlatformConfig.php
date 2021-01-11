@@ -17,7 +17,7 @@ class MediaPlatformConfig extends Model
      *
      * @var array
      */
-    protected $fillable = ['code', 'account_appid', 'account_secret', 'account_token', 'account_aes_key', 'more', 'remark'];
+    protected $fillable = ['media_platform_code', 'media_platform_name', 'account_appid', 'account_secret', 'account_token', 'account_aes_key', 'more', 'remark'];
 
     /**
      * 拓展字段修改器

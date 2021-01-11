@@ -33,7 +33,7 @@ class MediaPlatformController extends Controller
     public function service(string $code)
     {
 
-        $mediaPlatformConfig = $this->mediaPlatformConfig->where(['code' => $code])->first();
+        $mediaPlatformConfig = $this->mediaPlatformConfig->where(['media_platform_code' => $code])->first();
 
         if (empty($mediaPlatformConfig)) {
             return result(404, '未找到该公众号配置');
