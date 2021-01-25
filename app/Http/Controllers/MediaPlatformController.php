@@ -71,7 +71,8 @@ class MediaPlatformController extends Controller
                 switch ($message['MsgType']) {
                     case 'event':
                         if ($message['Event'] == 'subscribe') {
-                            return "欢迎关注";
+
+                            return $mediaPlatformConfig['subscribe_message'];
 
                         } elseif ($message['Event'] == 'unsubscribe') {
 
